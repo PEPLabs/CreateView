@@ -1,23 +1,24 @@
+package Model;
 
 import java.util.Objects;
 
-public class User {
+public class Person {
     private int id;
     private String firstname;
     private String lastname;
     private int age;
 
-    public User() {
+    public Person() {
     }
 
-    public User(int id, String firstname, String lastname, int age) {
+    public Person(int id, String firstname, String lastname, int age) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
     }
 
-    public User(String firstname, String lastname) {
+    public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }
@@ -58,7 +59,7 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        Person user = (Person) o;
         return id == user.id && age == user.age && Objects.equals(firstname, user.firstname) && Objects.equals(lastname, user.lastname);
     }
 
@@ -69,7 +70,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Model.User{" +
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
